@@ -275,4 +275,6 @@ Now we are ready to write code to pass our test.
 
 So there you have it "Jest testing for React crash course" step by step tutorial. Thanks for your time guys. I am opened to reply to any comments. So feel free to! 😎
 
+> Get the code for [this project](https://github.com/obedNuertey1/react-testing-with-jest.git)
+
 
