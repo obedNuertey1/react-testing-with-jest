@@ -1,5 +1,30 @@
+
+
 # Article
 # Jest testing for React Crash Course
+
+---
+### Overview:
+- [Article](#article)
+- [Jest testing for React Crash Course](#jest-testing-for-react-crash-course)
+		- [Overview:](#overview)
+	- [Creating our React Application](#creating-our-react-application)
+	- [Installing required dependencies](#installing-required-dependencies)
+	- [Setting up folder structure and file content](#setting-up-folder-structure-and-file-content)
+	- [Now Lets start Writing Some tests 🚀🚀💪](#now-lets-start-writing-some-tests-)
+		- [Code Explanation 📔:](#code-explanation-)
+	- [Writing the rest of the tests code](#writing-the-rest-of-the-tests-code)
+		- [Code Explanation for the last test 📔:](#code-explanation-for-the-last-test-)
+	- [Back to our application](#back-to-our-application)
+	- [Rerunning our tests](#rerunning-our-tests)
+- [Technical Documentation Main For JEST testing](#technical-documentation-main-for-jest-testing)
+	- [Folder structure](#folder-structure)
+	- [Other installs](#other-installs)
+	- [Run Tests with `npm test`](#run-tests-with-npm-test)
+	- [Run React up with `npm start`](#run-react-up-with-npm-start)
+---
+
+
 Hi! everyone! ✋😄 
 
 My name is Obed and  I'm quite new in software engineering. This will be the very first article I write as a software engineer and also as a member of this community.🥳🥳
@@ -76,7 +101,6 @@ Shall we...🚀🚀
   ```
 
 - Now we create a new folder called ***components*** folder  within the ***src*** and within the ***components*** folder we create a folder called ***\_\_tests__*** and a file called ***todoList.js*** as follows: 
-
   
   ![Component and todoList](image-2.png)
 
@@ -139,21 +163,21 @@ Shall we...🚀🚀
     -  And finally we import our TodoList component from the todoList.js file.
 
 
-  - #### The `afterEach()` function call:
+  - #### The afterEach function call:
     - we use the `afterEach()` function call to perform an action after each test. In this case we are clearing the testing console by passing a callback function as argument to `afterEach()` and calling the `cleanup()` function.
-  - #### Creating Test:
+  - #### Creating Tests:
     - How do we create tests? It is as simple as typing the function call `test()`.
     - `test()` takes two arguments. the first is a string which desribes what you as the developer is testing for the next argument is a callback function. Inside it is where your assertions are made to pass the tests.
     - The `todo` variable is a prop we specify which will be passed to the `<TodoList />` component specially for testing purposes.
     - Using the `render()` method we create an instance of the `TodoList` component parsing the content of the todo variable as props to the TodoList with the prop name `todo`.
     - `todoElement` variable gets the DOM element with the testid `todo-1`
     - We create `childElement1` variable which gets a child element nested within the `todoElement` with the class `.mytodo` by chaining a `querySelector()` with `.mytodo` passed as argument.
-    - ##### The `expect()` api:
+    - ##### The expect api:
       The `expect()` api is chained with other methods called matchers for running assertions.
 	  - For example `expect(todoElement).toBeInTheDocument()` checks whether the component with the testId `todo-1` is in the document. If this is true the test passes for this particular assertion.
 	  - This is the same for the next `expect()` api.
     	Just Like the `.toBeInTheDocument()` chained method, there are other methods like `.toHaveTextContent()` which checks whether the text content passed to the method is within the component or jsx. Also there are other methods like `.toHaveAttribute()` which takes two arguments "an attribute as the first" and "its the value" as the second.
-	> For More Information about Jest matchers checkout the [Jest Documentation](https://jestjs.io/docs/using-matchers)
+		> For More Information about Jest matchers checkout the [Jest Documentation](https://jestjs.io/docs/using-matchers)
 
 ## Writing the rest of the tests code
 ```javascript
@@ -187,7 +211,7 @@ Shall we...🚀🚀
 Now we are ready to write code to pass our test. 
 
 
-- ###App.js:
+- ### App.js:
   - Open the App.js file and complete the code by typing the following:
     ```javascript 
       	import React from "react";
@@ -237,34 +261,31 @@ Now we are ready to write code to pass our test.
     	 - We wrap the title variable around an h1 tag with a className of 'mytodo' and store it in an h1 variable.
     	 - On the next line we check if is completed is true we store the 'h1' variable wrapped in a strike tag to the text variable else we just store the original 'h1' variable to the `text` variable.
     	 - Inside our return statement we create a div tag with the attributes `id="todo"` and `data-testid={'todo-${id}'}` and nest the `text` variable within it.
-    	 - Now when we save our code and rerun our test with `npm test`, we get every other test passing but the snapshot failing. This is because, the jsx within the TodoList has changed as such the snapshot doesn't match the TodoList component's jsx. So this is what we get in our console:
-        
-          ![Alt text](image-3.png)
-        
-		  As you can see we have two of our test passing and one failing and this one is the snapshot. We can reset the snapshot by pressing "w to show more options".
 
-		  ![Alt text](image-4.png)
+## Rerunning our tests
+- Now when we save our code and rerun our test with `npm test`, we get every other test passing but the snapshot failing. This is because, the jsx within the TodoList has changed as such the snapshot doesn't match the TodoList component's jsx. So this is what we get in our console:
+  
+    ![Alt text](image-3.png)
+	
+ - As you can see we have two of our test passing and one failing and this one is the snapshot. We can reset the snapshot by pressing "w to show more options".
 
-    		To solve this problem we press "u" to update our snapshot.
+    ![Alt text](image-4.png)
 
-		![Alt text](image-5.png)
+    To solve this problem we press "u" to update our snapshot.
+    ![Alt text](image-5.png)
 
-			So as you can see our snapshot has been updated and all our tests pass now.
+    So as you can see our snapshot has been updated and all our tests pass now.
 
-			The final folder structure should look something like this:
+    The final folder structure should look something like this:
 
-			![Alt text](image-6.png)
+    ![Alt text](image-6.png)
 
 
 
 So there you have it "Jest testing for React crash course" step by step tutorial. Thanks for your time guys. I am opened to reply to any comments. So feel free to! 😎
 
-> Get the code for [this project](https://github.com/obedNuertey1/react-testing-with-jest.git)
-
 ---
 ---
-
-
 # Technical Documentation Main For JEST testing
 
 ## Folder structure
