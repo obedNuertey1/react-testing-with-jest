@@ -1,11 +1,7 @@
-
-
-# Article
 # Jest testing for React Crash Course
 
 ---
 ### Overview:
-- [Article](#article)
 - [Jest testing for React Crash Course](#jest-testing-for-react-crash-course)
 		- [Overview:](#overview)
 	- [Creating our React Application](#creating-our-react-application)
@@ -177,7 +173,7 @@ Shall we...🚀🚀
 	  - For example `expect(todoElement).toBeInTheDocument()` checks whether the component with the testId `todo-1` is in the document. If this is true the test passes for this particular assertion.
 	  - This is the same for the next `expect()` api.
     	Just Like the `.toBeInTheDocument()` chained method, there are other methods like `.toHaveTextContent()` which checks whether the text content passed to the method is within the component or jsx. Also there are other methods like `.toHaveAttribute()` which takes two arguments "an attribute as the first" and "its the value" as the second.
-		> For More Information about Jest matchers checkout the [Jest Documentation](https://jestjs.io/docs/using-matchers)
+> For More Information about Jest matchers checkout the [Jest Documentation](https://jestjs.io/docs/using-matchers)
 
 ## Writing the rest of the tests code
 ```javascript
@@ -272,6 +268,7 @@ Now we are ready to write code to pass our test.
     ![Alt text](image-4.png)
 
     To solve this problem we press "u" to update our snapshot.
+   
     ![Alt text](image-5.png)
 
     So as you can see our snapshot has been updated and all our tests pass now.
@@ -283,7 +280,7 @@ Now we are ready to write code to pass our test.
 
 
 So there you have it "Jest testing for React crash course" step by step tutorial. Thanks for your time guys. I am opened to reply to any comments. So feel free to! 😎
-
+> [Get the code from github](https://jestjs.io/docs/using-matchers)
 ---
 ---
 # Technical Documentation Main For JEST testing
