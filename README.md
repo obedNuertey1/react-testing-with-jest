@@ -1,23 +1,3 @@
-# Technical Documentation Main For JEST testing
-
-## Folder structure
-![Folder Structure for Jest testing](image.png)
-## Other installs
-
-- Using snapShots
-- run `npm i --save-dev @testing-library/react react-test-renderer`
-- and import the following to start creating your tests
-```js
-  import {render, screen, cleanup} from '@testing-library/react';
-  import renderer from 'react-test-renderer';
-```
-## Run Tests with `npm test`
-## Run React up with `npm start`
-
-
-
-
-
 # Article
 # Jest testing for React Crash Course
 Hi! everyone! ✋😄 
@@ -96,6 +76,7 @@ Shall we...🚀🚀
   ```
 
 - Now we create a new folder called ***components*** folder  within the ***src*** and within the ***components*** folder we create a folder called ***\_\_tests__*** and a file called ***todoList.js*** as follows: 
+
   
   ![Component and todoList](image-2.png)
 
@@ -172,7 +153,7 @@ Shall we...🚀🚀
 	  - For example `expect(todoElement).toBeInTheDocument()` checks whether the component with the testId `todo-1` is in the document. If this is true the test passes for this particular assertion.
 	  - This is the same for the next `expect()` api.
     	Just Like the `.toBeInTheDocument()` chained method, there are other methods like `.toHaveTextContent()` which checks whether the text content passed to the method is within the component or jsx. Also there are other methods like `.toHaveAttribute()` which takes two arguments "an attribute as the first" and "its the value" as the second.
-		> For More Information about Jest matchers checkout the [Jest Documentation](https://jestjs.io/docs/using-matchers)
+	> For More Information about Jest matchers checkout the [Jest Documentation](https://jestjs.io/docs/using-matchers)
 
 ## Writing the rest of the tests code
 ```javascript
@@ -257,13 +238,16 @@ Now we are ready to write code to pass our test.
     	 - On the next line we check if is completed is true we store the 'h1' variable wrapped in a strike tag to the text variable else we just store the original 'h1' variable to the `text` variable.
     	 - Inside our return statement we create a div tag with the attributes `id="todo"` and `data-testid={'todo-${id}'}` and nest the `text` variable within it.
     	 - Now when we save our code and rerun our test with `npm test`, we get every other test passing but the snapshot failing. This is because, the jsx within the TodoList has changed as such the snapshot doesn't match the TodoList component's jsx. So this is what we get in our console:
+        
           ![Alt text](image-3.png)
+        
 		  As you can see we have two of our test passing and one failing and this one is the snapshot. We can reset the snapshot by pressing "w to show more options".
 
-    		  ![Alt text](image-4.png)
+		  ![Alt text](image-4.png)
 
     		To solve this problem we press "u" to update our snapshot.
-			![Alt text](image-5.png)
+
+		![Alt text](image-5.png)
 
 			So as you can see our snapshot has been updated and all our tests pass now.
 
@@ -277,4 +261,22 @@ So there you have it "Jest testing for React crash course" step by step tutorial
 
 > Get the code for [this project](https://github.com/obedNuertey1/react-testing-with-jest.git)
 
+---
+---
 
+
+# Technical Documentation Main For JEST testing
+
+## Folder structure
+![Folder Structure for Jest testing](image.png)
+## Other installs
+
+- Using snapShots
+- run `npm i --save-dev @testing-library/react react-test-renderer`
+- and import the following to start creating your tests
+```js
+  import {render, screen, cleanup} from '@testing-library/react';
+  import renderer from 'react-test-renderer';
+```
+## Run Tests with `npm test`
+## Run React up with `npm start`
